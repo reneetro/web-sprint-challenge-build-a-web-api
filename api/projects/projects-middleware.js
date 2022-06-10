@@ -27,7 +27,7 @@ function validateProjectId(req, res, next) {
             return;
         }
         if(typeof completed !== 'boolean'){
-            res.status(400).json({ message: 'missing required description field'});
+            res.status(400).json({ message: 'missing required completed field'});
         }
 
         req.project = {name: name.trim(), description: description.trim(), completed: completed};
